@@ -30,6 +30,11 @@ const Banner: React.FC<BannerProps> = ({ page }) => {
             title = 'Ley de Continuidad, Figura-Fondo y Simetría';
             banner = 'cfs.jpg';
             break;
+        case 'direccion':
+            unit = '3';
+            title = 'Ley de Dirección Común';
+            banner = 'direccion.jpg';
+            break;
         default:
             title = 'Guía Práctica de las Leyes de Gestalt';
             banner = 'banner.jpg';
@@ -62,7 +67,7 @@ const Banner: React.FC<BannerProps> = ({ page }) => {
     // Nueva función para manejar el clic en el enlace
     const handleLinkClick = () => {
         // Hacer scroll a la parte superior de la página
-        window.scrollTo({ top: 0});
+        window.scrollTo({ top: 0 });
         setMenuOpen(false); // Cerrar el menú después de hacer clic
     };
 
@@ -111,6 +116,9 @@ const Banner: React.FC<BannerProps> = ({ page }) => {
                                 </li>
                                 <li className='my-2'>
                                     <Link to="/continuidad-figura-fondo" onClick={handleLinkClick} className='block p-3 text-gray-800 hover:bg-blue-600 hover:text-white rounded-lg transition duration-300 ease-in-out transform hover:scale-105'>Ley de Continuidad, Figura-Fondo y Simetría</Link>
+                                </li>
+                                <li className='my-2'>
+                                    <Link to="/direccion" onClick={handleLinkClick} className='block p-3 text-gray-800 hover:bg-blue-600 hover:text-white rounded-lg transition duration-300 ease-in-out transform hover:scale-105'>Ley de Dirección Común</Link>
                                 </li>
                             </ul>
                         </nav>

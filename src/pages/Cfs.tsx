@@ -12,7 +12,7 @@ const Cfs = () => {
 
     const handleStartCourse = () => {
         window.scrollTo(0, 0);
-        navigate('/saturacion');
+        navigate('/direccion');
     };
     return (
         <div className="bg-gray-50 min-h-screen">

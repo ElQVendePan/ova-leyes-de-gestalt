@@ -24,12 +24,11 @@ const Cuestionario: React.FC = () => {
     };
 
     const handleSubmit = () => {
-        // Verificar si todas las preguntas han sido respondidas
         if (Object.keys(answers).length !== questions.length) {
             setShowError(true);
             return;
         }
-        // Calcular el puntaje
+
         let correct = 0;
         questions.forEach((q, index) => {
             if (answers[`question-${index}`] === q.answer) {
@@ -42,135 +41,78 @@ const Cuestionario: React.FC = () => {
 
     const questions = [
         {
-            question: '¿Qué es la rueda de color?',
+            question: '¿Qué ley de Gestalt describe mejor esta imagen?',
+            image: '/proximidad.jpg', // Imagen de proximidad
             options: [
-                { text: 'Un modelo para mezclar colores' },
-                { text: 'Una herramienta de diseño' },
-                { text: 'Un esquema de colores complementarios' },
-                { text: 'Una clasificación de tonos' },
+                { text: 'Proximidad' },
+                { text: 'Similitud' },
+                { text: 'Cierre' },
+                { text: 'Figura-Fondo' },
             ],
-            answer: 'Un modelo para mezclar colores',
+            answer: 'Proximidad',
         },
         {
-            question: '¿Qué colores se consideran primarios?',
+            question: '¿Cuál es el principio de Gestalt que explica por qué vemos una forma completa aunque le falten algunas partes?',
             options: [
-                { text: 'Rojo, amarillo, azul' },
-                { text: 'Rojo, verde, negro' },
-                { text: 'Naranja, violeta, rosa' },
-                { text: 'Cyan, magenta, amarillo' },
+                { text: 'Cierre' },
+                { text: 'Continuidad' },
+                { text: 'Similitud' },
+                { text: 'Proximidad' },
             ],
-            answer: 'Rojo, amarillo, azul',
+            answer: 'Cierre',
         },
         {
-            question: '¿Qué es la saturación en color?',
+            question: '¿Qué ley de Gestalt se refiere a la agrupación de elementos que comparten características visuales similares?',
             options: [
-                { text: 'La pureza del color' },
-                { text: 'La claridad del color' },
-                { text: 'La intensidad de la luz' },
-                { text: 'La mezcla de colores' },
+                { text: 'Similitud' },
+                { text: 'Continuidad' },
+                { text: 'Figura-Fondo' },
+                { text: 'Simetría' },
             ],
-            answer: 'La pureza del color',
+            answer: 'Similitud',
+        },        
+        {
+            question: '¿Qué ley de Gestalt representa mejor esta imagen?',
+            image: '/figura_fondo.jpg', // Imagen para figura-fondo
+            options: [
+                { text: 'Proximidad' },
+                { text: 'Continuidad' },
+                { text: 'Figura-Fondo' },
+                { text: 'Similitud' },
+            ],
+            answer: 'Figura-Fondo',
         },
         {
-            question: '¿Qué es un color complementario?',
+            question: 'Selecciona la ley de Gestalt que mejor describe esta imagen.',
+            image: '/direccion_comun.jpg', // Imagen de Dirección Común
             options: [
-                { text: 'Colores que están juntos en la rueda de color' },
-                { text: 'Colores que se mezclan para formar un nuevo color' },
-                { text: 'Colores que se encuentran opuestos en la rueda de color' },
-                { text: 'Colores que se ven bien juntos' },
+                { text: 'Similitud' },
+                { text: 'Dirección Común' },
+                { text: 'Simetría' },
+                { text: 'Figura - Fondo' },
             ],
-            answer: 'Colores que se encuentran opuestos en la rueda de color',
+            answer: 'Dirección Común',
         },
         {
-            question: '¿Qué significa el término "matiz"?',
+            question: '¿Cuál de las siguientes imágenes muestra mejor el principio de Cierre?',
             options: [
-                { text: 'El brillo de un color' },
-                { text: 'El tono de un color' },
-                { text: 'La mezcla de colores' },
-                { text: 'La cantidad de color negro añadido' },
+                { image: '/cierre1.jpg', text: 'Opción 1' },
+                { image: '/cierre2.jpg', text: 'Opción 2' },
+                { image: '/cierre3.jpg', text: 'Opción 3' },
+                { image: '/cierre4.jpg', text: 'Opción 4' },
             ],
-            answer: 'El tono de un color',
+            answer: 'Opción 2',
         },
         {
-            question: '¿Qué es un esquema de color análogo?',
+            question: 'Cuando en una fila de puntos, algunos están más juntos que otros, ¿qué principio de Gestalt describe cómo agrupamos los puntos cercanos?',
             options: [
-                { text: 'Colores que están opuestos en la rueda de color' },
-                { text: 'Colores que están uno al lado del otro en la rueda de color' },
-                { text: 'Colores que son todos primarios' },
-                { text: 'Colores que se complementan entre sí' },
+                { text: 'Proximidad' },
+                { text: 'Similitud' },
+                { text: 'Cierre' },
+                { text: 'Dirección Común' },
             ],
-            answer: 'Colores que están uno al lado del otro en la rueda de color',
-        },
-        {
-            question: '¿Qué efecto produce el color rojo?',
-            options: [
-                { text: 'Tranquilidad' },
-                { text: 'Energía' },
-                { text: 'Neutralidad' },
-                { text: 'Tristeza' },
-            ],
-            answer: 'Energía',
-        },
-        {
-            question: '¿Qué es el color RGB?',
-            options: [
-                { text: 'Un modelo de color aditivo basado en luz' },
-                { text: 'Un modelo de color sustractivo' },
-                { text: 'Un esquema de colores complementarios' },
-                { text: 'Una clasificación de colores para impresión' },
-            ],
-            answer: 'Un modelo de color aditivo basado en luz',
-        },
-        {
-            question: '¿Qué significa "brillo" en la teoría del color?',
-            options: [
-                { text: 'La luminosidad del color' },
-                { text: 'La pureza del color' },
-                { text: 'La saturación del color' },
-                { text: 'La temperatura del color' },
-            ],
-            answer: 'La luminosidad del color',
-        },
-        {
-            question: '¿Cuál es la combinación de colores que produce un color secundario?',
-            options: [
-                { text: 'Mezclar dos colores primarios' },
-                { text: 'Mezclar un color primario y un color secundario' },
-                { text: 'Mezclar dos colores complementarios' },
-                { text: 'Mezclar colores análogos' },
-            ],
-            answer: 'Mezclar dos colores primarios',
-        },
-        {
-            question: '¿Cuál es el color opuesto al azul en la rueda de color?',
-            options: [
-                { text: 'Rojo' },
-                { text: 'Verde' },
-                { text: 'Morado' },
-                { text: 'Amarillo' },
-            ],
-            answer: 'Amarillo',
-        },
-        {
-            question: '¿Qué efecto emocional se asocia comúnmente con el color azul?',
-            options: [
-                { text: 'Tranquilidad y serenidad' },
-                { text: 'Energía y excitación' },
-                { text: 'Ansiedad y estrés' },
-                { text: 'Agresividad y frustración' },
-            ],
-            answer: 'Tranquilidad y serenidad',
-        },
-        {
-            question: '¿Qué efectos puede provocar ver el color amarillo durante períodos prolongados?',
-            options: [
-                { text: 'Aumenta la concentración' },
-                { text: 'Provoca ansiedad y fatiga visual' },
-                { text: 'Fomenta la creatividad' },
-                { text: 'Causa relajación' },
-            ],
-            answer: 'Provoca ansiedad y fatiga visual',        
-        },
+            answer: 'Proximidad',
+        },        
     ];
 
     const handleStartCourse = () => {
@@ -182,13 +124,16 @@ const Cuestionario: React.FC = () => {
         <div className='min-h-screen'>
             <Banner />
             <Content>
-                <Title>Cuestionario | Psicología del Color</Title>
+                <Title>Cuestionario | Leyes de Gestalt</Title>
                 <p className="mt-4 mb-12 text-gray-700">Responde las siguientes preguntas seleccionando la opción correcta:</p>
 
                 {questions.map((q, index) => (
                     <div key={index} className="my-14">
                         <h2 className="text-lg font-bold">{q.question}</h2>
-                        <div className="mt-2">
+                        {q.image && (
+                            <img src={q.image} alt={`Pregunta ${index}`} className="my-4 rounded-lg max-w-full lg:max-w-52" />
+                        )}
+                        <div className="mt-6">
                             {q.options.map((option, idx) => (
                                 <label key={idx} className={`block p-2 my-1 rounded-lg cursor-pointer ${answers[`question-${index}`] === option.text ? 'bg-blue-600 text-white' : 'bg-slate-100 text-black'}`}>
                                     <input
@@ -198,7 +143,11 @@ const Cuestionario: React.FC = () => {
                                         onChange={handleChange}
                                         className="mr-2"
                                     />
-                                    {option.text}
+                                    {option.image ? (
+                                        <img src={option.image} alt={`Opción ${idx}`} className="inline-block w-32 rounded-lg" />
+                                    ) : (
+                                        option.text
+                                    )}
                                 </label>
                             ))}
                         </div>

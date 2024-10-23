@@ -53,11 +53,9 @@ const MainPage: React.FC = () => {
               </ul>
             </li>
             <li className="mb-3">
-              <strong>3. Psicología del Color</strong>
+              <strong>3. Ley de Dirección Común</strong>
               <ul className="list-circle ml-6 mt-2">
-                <li>3.1 | Impacto emocional y psicológico del color</li>
-                <li>3.2 | Psicología de los colores</li>
-                <li>3.3 | Recursos Adicionales</li>
+                <li>3.1 | Ley de Dirección Común</li>
               </ul>
             </li>
             <li className="mb-3">
@@ -77,8 +75,20 @@ const MainPage: React.FC = () => {
               <a href="https://acumbamail.com/blog/leyes-de-gestalt/" className='text-blue-600' target='_blank'>https://acumbamail.com/blog/leyes-de-gestalt/</a>
             </p>
             <p className="mb-6">
-              Fran. (2022, December 5). Leyes de la Gestalt: principio de continuidad y de dirección común. Blog De Francisco Torreblanca. <br />
+              Fran. (2022, December 5). Leyes de la Gestalt: principio de continuidad y de dirección común. Blog De Francisco Torreblanca.<br />
               <a href="https://franciscotorreblanca.es/principio-de-continuidad-direccion-comun/" className='text-blue-600' target='_blank'>https://franciscotorreblanca.es/principio-de-continuidad-direccion-comun/</a>
+            </p>
+            <p className="mb-6">
+              SL, A.-. A. I. (n.d.). Las Leyes de la Gestalt. Las Leyes De La Gestalt.
+              <a href="https://anasaci.com/blog/disenadores/diseno_grafico/las-leyes-de-la-gestalt.html" className='text-blue-600' target='_blank'>https://anasaci.com/blog/disenadores/diseno_grafico/las-leyes-de-la-gestalt.html</a>
+            </p>
+            <p className="mb-6">
+              Ilerna, & Ilerna. (2024, April 16). Leyes de la Gestalt y su impacto en la percepción visual | ILERNA. Blog ILERNA Online: FP a Distancia Con Titulación Oficial.<br />
+              <a href="https://www.ilerna.es/blog/leyes-de-la-gestalt" className='text-blue-600' target='_blank'>https://www.ilerna.es/blog/leyes-de-la-gestalt</a>
+            </p>
+            <p className="mb-6">
+              Damos.co. (n.d.). Explorando los principios Gestalt del diseño.<br />
+              <a href="https://www.damos.co/our-blog/branding/explorando-los-principios-gestalt-del-diseno" className='text-blue-600' target='_blank'>https://www.damos.co/our-blog/branding/explorando-los-principios-gestalt-del-diseno</a>
             </p>
           </div>
         </details>
