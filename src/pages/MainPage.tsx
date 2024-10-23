@@ -88,7 +88,7 @@ const MainPage: React.FC = () => {
             </p>
             <p className="mb-6">
               Damos.co. (n.d.). Explorando los principios Gestalt del diseño.<br />
-              <a href="https://www.damos.co/our-blog/branding/explorando-los-principios-gestalt-del-diseno" className='text-blue-600' target='_blank'>https://www.damos.co/our-blog/branding/explorando-los-principios-gestalt-del-diseno</a>
+              <a href="https://anasaci.com/blog/disenadores/diseno_grafico/las-leyes-de-la-gestalt.html" className='text-blue-600' target='_blank'>https://anasaci.com/blog/disenadores/diseno_grafico/las-leyes-de-la-gestalt.html</a>
             </p>
           </div>
         </details>
